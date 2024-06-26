@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrowImg from "../../assets/arrow.svg";
-import logoImg from "../../assets/logo.png";
+import logoImg from "../../assets/Logo.png";
 import { auth } from "../../services/firebaseConfig";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import "./styles.css";
@@ -11,6 +11,7 @@ export function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSignup = async (event) => {
     event.preventDefault();
@@ -18,6 +19,7 @@ export function Register() {
       await createUserWithEmailAndPassword(auth, email, password);
       alert('Usuário cadastrado com sucesso!');
       setError(null); // Reset error after successful signup
+      navigate('/login')
     } catch (error) {
       setError(error.message || 'An error occurred during signup.');
     }

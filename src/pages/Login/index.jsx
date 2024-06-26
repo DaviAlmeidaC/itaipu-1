@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useHistory } from "react-router-dom"; // Importe useHistory aqui
+import { Link, useNavigate } from "react-router-dom";
 import arrowImg from "../../assets/arrow.svg";
-import logoImg from "../../assets/logo.png";
+import logoImg from "../../assets/Logo.png";
 import { auth } from "../../services/firebaseConfig";
 import "./styles.css";
 
@@ -10,16 +10,15 @@ export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null); // State para armazenar erros
-  const history = useHistory(); // Use useHistory aqui
 
   const [signInWithEmailAndPassword, user, loading] = useSignInWithEmailAndPassword(auth);
-
+  const navigate = useNavigate();
   const handleSignIn = async (e) => {
     e.preventDefault();
 
     try {
       await signInWithEmailAndPassword(email, password);
-      history.push("/acao"); // Redireciona após o login bem sucedido
+      navigate("/acao"); // Redireciona após o login bem sucedido
     } catch (error) {
       setError(error.message); // Define o erro para exibir na UI
     }

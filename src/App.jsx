@@ -1,6 +1,10 @@
 import "./global.css";
-import { AppRoutes } from "./routes/AppRoutes";
+import AppRoutes from "./routes/AppRoutes";
 
 export function App() {
-  return <AppRoutes />;
+  return (
+    <div>
+      <AppRoutes />
+    </div>
+  )
 }

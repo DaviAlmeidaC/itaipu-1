@@ -1,4 +1,4 @@
-import logoImg from "../../assets/LOGO.png";
+import logoImg from "../../assets/Logo.png";
 import "./styles.css";
 import { Link,  } from 'react-router-dom';
 import { Login } from "../../pages/Login";
