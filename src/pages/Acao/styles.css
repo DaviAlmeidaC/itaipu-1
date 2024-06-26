@@ -1,0 +1,14 @@
+.dados{
+    display: flex;
+    
+    color: #0E2A47;
+    padding: 20vh;
+    flex-direction: column;
+
+}
+
+.inf-bd{
+    margin-top: 2vh;
+    font-size: 18px;
+    font-weight: 500;
+}
