@@ -4,6 +4,7 @@ import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { Home } from "../pages/Home";
 import { Acao } from "../pages/Acao";
+import { History } from "../pages/History";
 
 export default function AppRoutes() {
   return (
@@ -12,7 +13,9 @@ export default function AppRoutes() {
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/acao" element={<Acao />} />
+        <Route path="/history" element={<History />} />
       </Routes>
     </BrowserRouter>
   );
