@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ref, onValue, off } from 'firebase/database';
 import { database } from '../../services/firebaseConfig';
 import { Header } from '../../components/header';
-import './styles.css';
+import './styles1.css';
 import { Link } from 'react-router-dom';
 import { Footer } from '../../components/footer';
 
@@ -71,21 +71,22 @@ export function History() {
         <div className="back">
             <Header />
             <div className="divir">
+            <h1 className='h1name'>Dados do Sensor MPU</h1>
             <div className='dados1'>
-                <h1>Dados do Sensor MPU</h1>
-                <div>
+               
+                <div >
                 {arrays.ArrayAceleracao.map((value, index) => (
-                    <p key={index} className='inf-bd'>Acelaração: {value}</p>
+                    <p key={index} className='inf-bd1'>Acelaração: {value}</p>
                     ))} 
 </div>
 <div>
                 {arrays.ArrayRotacao.map((value, index) => (
-                    <p key={index} className='inf-bd'>Rotação: {value}</p>
+                    <p key={index} className='inf-bd1'>Rotação: {value}</p>
                     ))} 
 </div>
 <div>
                 {arrays.ArrayTemperatura.map((value, index) => (
-                    <p key={index} className='inf-bd'>Temperatura: {value}</p>
+                    <p key={index} className='inf-bd1'>Temperatura: {value}</p>
                     ))} 
 </div>
 

@@ -76,13 +76,11 @@ export function Acao() {
                 <p className='inf-bd'>Aceleração: {data.Aceleracao.valor}</p>
                 <p className='inf-bd'>Rotação: {data.Rotacao.valor}</p>
                 <p className='inf-bd'>Temperatura: {data.Temperatura.valor}</p>
-                {arrays.ArrayTemperatura.map((value, index) => (
-                    <p key={index} className='inf-bd'>Temperatura: {value}</p>
-                    ))} 
+               
             </div>
                 <div className="butao-history">
                     <Link to='/history'>
-                    <button className="button-header">History</button>
+                    <button className="button-header1">History</button>
                     </Link>
                 </div>
             </div>

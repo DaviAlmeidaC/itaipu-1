@@ -1,0 +1,40 @@
+
+
+.dados1{
+    display: flex;
+    margin-right: 2em;
+    color: #0E2A47;
+
+    
+
+}
+
+.h1name{
+    color: #fff;
+}
+
+.inf-bd1{
+    margin-top: 2vh;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 2em;
+}
+
+.button-header1{
+    padding: 0.5em 2em;
+    background-color: #12C2E8;
+    color: #fff;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: 50vh;
+}
+
+.button-header1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
